@@ -1,6 +1,8 @@
 package ir.mctab.java32.projects.scholarshipmanagement;
 
+import ir.mctab.java32.projects.scholarshipmanagement.features.scholarshipverification.impl.AcceptScholarshipBySupervisorUseCaseImpl;
 import ir.mctab.java32.projects.scholarshipmanagement.features.scholarshipverification.impl.FindScholarshipBySupervisorUseCaseImpl;
+import ir.mctab.java32.projects.scholarshipmanagement.features.scholarshipverification.usecases.AcceptScholarshipBySupervisorUseCase;
 import ir.mctab.java32.projects.scholarshipmanagement.features.scholarshipverification.usecases.FindScholarshipBySupervisorUseCase;
 import ir.mctab.java32.projects.scholarshipmanagement.features.usermanagement.impl.LoginUseCaseImpl;
 import ir.mctab.java32.projects.scholarshipmanagement.features.usermanagement.usecases.LoginUseCase;
@@ -41,6 +43,16 @@ public class ScholarshipManagementApplication {
                 for (int i = 0; i < scholarships.size(); i++) {
                     System.out.println(scholarships.get(i));
                 }
+            }
+
+            // accept
+            if (command.equals("svaccept")) {
+                AcceptScholarshipBySupervisorUseCase acceptScholarshipBySupervisorUseCase
+                        = new AcceptScholarshipBySupervisorUseCaseImpl();
+                System.out.println("Scholarship Id: ");
+                String scholarshipId = scanner.nextLine();
+                acceptScholarshipBySupervisorUseCase.accept(Long.parseLong(scholarshipId));
+                System.out.println("Done.");
             }
         }
     }
