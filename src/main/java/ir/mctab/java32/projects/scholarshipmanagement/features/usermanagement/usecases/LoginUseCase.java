@@ -3,5 +3,5 @@ package ir.mctab.java32.projects.scholarshipmanagement.features.usermanagement.u
 import ir.mctab.java32.projects.scholarshipmanagement.model.User;
 
 public interface LoginUseCase {
-    User login(String username, String password);
+    User login(String username, String password , String date);
 }

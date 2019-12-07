@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 @Service
 public class LoginUseCaseImpl implements LoginUseCase {
-    public User login(String username, String password) {
+    public User login(String username, String password,String date) {
         // get connection
         try {
             Connection connection = DatabaseConfig.getDatabaseConnection();
@@ -31,6 +31,7 @@ public class LoginUseCaseImpl implements LoginUseCase {
                   resultSet.getString("role")
                 );
                 AuthenticationService.getInstance().setLoginUser(user);
+                AuthenticationService.getInstance().setDate(date);
                 return user;
             }
         } catch (ClassNotFoundException e) {

@@ -5,6 +5,7 @@ import ir.mctab.java32.projects.scholarshipmanagement.model.User;
 public class AuthenticationService {
 
     private User loginUser;
+    private String date;
 
     private static AuthenticationService authenticationService = null;
     public static AuthenticationService getInstance() {
@@ -24,5 +25,13 @@ public class AuthenticationService {
 
     public User getLoginUser() {
         return loginUser;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }
