@@ -103,6 +103,13 @@ public class ScholarshipManagementApplication {
                     System.out.println("Done.");
                 }
 
+            // Dashboard scholarship only by manager
+            if (command.equals("dashboard")) {
+                DashboardScholarshipByManagerUseCase dashboardScholarshipByManagerUseCase
+                        = new DashboardScholarshipByManagerUseCaseImpl();
+                System.out.println(dashboardScholarshipByManagerUseCase.listScholarshipsStatus());
+            }
+
                 //reject scholarship by manager
                 if (command.equals("mnreject")) {
                     RejectScholarshipByManagerUseCase rejectScholarshipByManagerUseCase
