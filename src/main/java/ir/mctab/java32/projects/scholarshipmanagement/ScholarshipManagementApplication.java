@@ -33,13 +33,16 @@ public class ScholarshipManagementApplication {
                 String date = "16-9-1397";
                 User user = loginUseCase.login(username, password, date);
                 if (user != null) {
-                    System.out.println(" Login successful by " + user.getRole());
+                    System.out.println("Login successful by " + user.getRole());
                 }
             }
                 //logout
                 if (command.equals("logout")) {
                   LogoutUseCase logoutUseCase= new ir.mctab.java32.projects.scholarshipmanagement.features.usermanagement.impl.LogoutUseCase();
                   logoutUseCase.logout();
+                    if (AuthenticationService.getInstance().getLoginUser()== null) {
+                        System.out.println("Logout successful");
+                    }
                 }
 
                 // find scholarship by supervisort
@@ -60,8 +63,10 @@ public class ScholarshipManagementApplication {
                             = new AcceptScholarshipBySupervisorUseCaseImpl();
                     System.out.println("Scholarship Id: ");
                     String scholarshipId = scanner.nextLine();
-                    acceptScholarshipBySupervisorUseCase.accept(Long.parseLong(scholarshipId));
-                    System.out.println("Done.");
+                    int done =acceptScholarshipBySupervisorUseCase.accept(Long.parseLong(scholarshipId));
+                   if(done!=0) {
+                       System.out.println("Done.");
+                   }
                 }
 
                 //reject scholarship by supervisor
@@ -70,8 +75,10 @@ public class ScholarshipManagementApplication {
                             = new RejectScholarshipBySupervisorUseCaseImpl();
                     System.out.println("Scholarship Id: ");
                     String scholarshipId = scanner.nextLine();
-                    rejectScholarshipBySupervisorUseCase.reject(Long.parseLong(scholarshipId));
-                    System.out.println("Done");
+                    int done = rejectScholarshipBySupervisorUseCase.reject(Long.parseLong(scholarshipId));
+                    if(done!=0) {
+                        System.out.println("Done.");
+                    }
                 }
 
                 // find scholarship by manager
