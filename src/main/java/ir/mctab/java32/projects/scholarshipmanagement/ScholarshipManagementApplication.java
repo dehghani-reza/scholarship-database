@@ -30,10 +30,13 @@ public class ScholarshipManagementApplication {
                 System.out.println("Password : ");
                 String password = scanner.nextLine();
                 LoginUseCase loginUseCase = new LoginUseCaseImpl();
-                String date = "16-9-1397";
+                String date = "1397-09-21";
                 User user = loginUseCase.login(username, password, date);
                 if (user != null) {
                     System.out.println("Login successful by " + user.getRole());
+                }
+                else{
+                    System.out.println("Login Failed");
                 }
             }
                 //logout

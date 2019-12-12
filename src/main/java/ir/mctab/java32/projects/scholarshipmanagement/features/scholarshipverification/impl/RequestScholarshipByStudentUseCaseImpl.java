@@ -30,7 +30,7 @@ public class RequestScholarshipByStudentUseCaseImpl implements RequestScholarshi
                             " VALUES" +
                             " (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?)";
                     // result
-                    PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                    PreparedStatement preparedStatement = connection.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
                     preparedStatement.setString(1,"RequestedByStudent");
                     preparedStatement.setString(2,information.get(0));
                     preparedStatement.setString(3,information.get(1));
@@ -44,6 +44,7 @@ public class RequestScholarshipByStudentUseCaseImpl implements RequestScholarshi
                     preparedStatement.setString(11,information.get(9));
                     preparedStatement.setString(12,information.get(10));
                     int status =preparedStatement.executeUpdate();
+                    preparedStatement.getGeneratedKeys();
                     //log
                     String sqlinfo = "SELECT id FROM scholarship.scholarship where applyuni= '"+information.get(7) +"' and name= '"+information.get(0)+"'";
                     PreparedStatement preparedStatementinfo = connection.prepareStatement(sqlinfo);
