@@ -7,7 +7,8 @@ public class AuthenticationService {
     private User loginUser;
     private String date;
 
-    private static AuthenticationService authenticationService = null;
+    private static AuthenticationService authenticationService ;
+
     public static AuthenticationService getInstance() {
         if (authenticationService == null) {
             authenticationService = new AuthenticationService();
@@ -16,6 +17,7 @@ public class AuthenticationService {
     }
 
     private AuthenticationService() {
+
 
     }
 

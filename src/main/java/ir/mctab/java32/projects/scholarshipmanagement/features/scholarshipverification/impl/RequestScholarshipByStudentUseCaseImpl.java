@@ -4,6 +4,7 @@ import ir.mctab.java32.projects.scholarshipmanagement.core.annotations.Service;
 import ir.mctab.java32.projects.scholarshipmanagement.core.annotations.UseCase;
 import ir.mctab.java32.projects.scholarshipmanagement.core.config.DatabaseConfig;
 import ir.mctab.java32.projects.scholarshipmanagement.core.share.AuthenticationService;
+import ir.mctab.java32.projects.scholarshipmanagement.core.share.ScholarshipLog;
 import ir.mctab.java32.projects.scholarshipmanagement.features.scholarshipverification.usecases.RequestScholarshipByStudentUseCase;
 import ir.mctab.java32.projects.scholarshipmanagement.model.Scholarship;
 import ir.mctab.java32.projects.scholarshipmanagement.model.User;
@@ -26,11 +27,11 @@ public class RequestScholarshipByStudentUseCaseImpl implements RequestScholarshi
                     connection = DatabaseConfig.getDatabaseConnection();
                     // query
                     String sql = "INSERT INTO scholarship.scholarship" +
-                            " (status, name, family, nationalCode, lastUni, lastDegree, lastField, lastScore, applyUni, applyDegree, applyField, applyDate) " +
+                            " (status, name, family, nationalCode, lastUni, lastDegree, lastField, lastScore, applyUni, applyDegree, applyField, applyDate, username) " +
                             " VALUES" +
-                            " (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?)";
+                            " (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?,?)";
                     // result
-                    PreparedStatement preparedStatement = connection.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
+                    PreparedStatement preparedStatement = connection.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
                     preparedStatement.setString(1,"RequestedByStudent");
                     preparedStatement.setString(2,information.get(0));
                     preparedStatement.setString(3,information.get(1));
@@ -43,26 +44,20 @@ public class RequestScholarshipByStudentUseCaseImpl implements RequestScholarshi
                     preparedStatement.setString(10,information.get(8));
                     preparedStatement.setString(11,information.get(9));
                     preparedStatement.setString(12,information.get(10));
+                    preparedStatement.setString(13,AuthenticationService.getInstance().getLoginUser().getUsername());
                     int status =preparedStatement.executeUpdate();
-                    preparedStatement.getGeneratedKeys();
+                    ResultSet resultSet = preparedStatement.getGeneratedKeys();
                     //log
-                    String sqlinfo = "SELECT id FROM scholarship.scholarship where applyuni= '"+information.get(7) +"' and name= '"+information.get(0)+"'";
-                    PreparedStatement preparedStatementinfo = connection.prepareStatement(sqlinfo);
-                    ResultSet resultSet = preparedStatementinfo.executeQuery();
-                    Long id = null;
-                    while ((resultSet.next())){
-                         id = resultSet.getLong("id");
+                    while (resultSet.next()){
+                        if(status!=0){
+                            int i1= ScholarshipLog.getInstance().getResultScholarshipLog("RequestScholarshipByStudent",resultSet.getInt(1));
+                            if (i1!=0){
+                                System.out.println(status+" row('s) affected");
+                            }
+                        }else {
+                            System.out.println("you can't change this scholarship status");
+                        }
                     }
-                    String sqlLog = "INSERT INTO `scholarship`.`scholarship_log` " +
-                            "(`action`, `date`, `userid`, `scholarshipid`) " +
-                            "VALUES ( ?, ?, ?, ?)";
-                    PreparedStatement preparedStatementLog = connection.prepareStatement(sqlLog);
-                    preparedStatementLog.setString(1,"StartRequest");
-                    preparedStatementLog.setString(2,AuthenticationService.getInstance().getDate());
-                    preparedStatementLog.setLong(3,loginUser.getId());
-                    preparedStatementLog.setLong(4,id);
-                    preparedStatementLog.executeUpdate();
-                    return status;
 
 
                 } catch (SQLException e) {

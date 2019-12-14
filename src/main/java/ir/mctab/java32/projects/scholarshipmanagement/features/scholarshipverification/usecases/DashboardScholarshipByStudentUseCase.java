@@ -2,6 +2,6 @@ package ir.mctab.java32.projects.scholarshipmanagement.features.scholarshipverif
 
 import java.util.Map;
 
-public interface DashboardScholarshipByManagerUseCase {
-     Map<String,Integer> listScholarshipsStatus();
+public interface DashboardScholarshipByStudentUseCase {
+    Map<String,Integer> listScholarshipsStatus();
 }

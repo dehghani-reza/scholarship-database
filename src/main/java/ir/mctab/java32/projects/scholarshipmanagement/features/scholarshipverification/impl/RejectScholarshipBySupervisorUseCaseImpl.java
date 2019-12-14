@@ -3,6 +3,7 @@ package ir.mctab.java32.projects.scholarshipmanagement.features.scholarshipverif
 import ir.mctab.java32.projects.scholarshipmanagement.core.annotations.Service;
 import ir.mctab.java32.projects.scholarshipmanagement.core.config.DatabaseConfig;
 import ir.mctab.java32.projects.scholarshipmanagement.core.share.AuthenticationService;
+import ir.mctab.java32.projects.scholarshipmanagement.core.share.ScholarshipLog;
 import ir.mctab.java32.projects.scholarshipmanagement.features.scholarshipverification.usecases.RejectScholarshipBySupervisorUseCase;
 import ir.mctab.java32.projects.scholarshipmanagement.model.User;
 
@@ -49,15 +50,14 @@ public class RejectScholarshipBySupervisorUseCaseImpl implements RejectScholarsh
                 preparedStatement.setLong(1, scholarshipId);
                 done = preparedStatement.executeUpdate();
                 //log
-                String sqlLog = "INSERT INTO `scholarship`.`scholarship_log` " +
-                        "(`action`, `date`, `userid`, `scholarshipid`) " +
-                        "VALUES ( ?, ?, ?, ?)";
-                PreparedStatement preparedStatementLog = connection.prepareStatement(sqlLog);
-                preparedStatementLog.setString(1,"RejectedBySupervisor");
-                preparedStatementLog.setString(2,AuthenticationService.getInstance().getDate());
-                preparedStatementLog.setLong(3,user.getId());
-                preparedStatementLog.setLong(4,scholarshipId);
-                preparedStatementLog.executeUpdate();
+                if(done!=0){
+                    int i1= ScholarshipLog.getInstance().getResultScholarshipLog("RejectedBySupervisor",scholarshipId);
+                    if (i1!=0){
+                        System.out.println(done+" row('s) affected");
+                    }
+                }else {
+                    System.out.println("you can't change this scholarship status");
+                }
             } catch (SQLException e) {
                 e.printStackTrace();
             }

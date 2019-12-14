@@ -21,7 +21,7 @@ public class ScholarshipManagementApplication {
         Scanner scanner = new Scanner(System.in);
         String command = "";
         while (!command.equals("exit")) {
-            System.out.println("what do you want? ");
+            talk(AuthenticationService.getInstance().getLoginUser());
             command = scanner.nextLine();
             // Login
             if (command.equals("login")) {
@@ -103,10 +103,10 @@ public class ScholarshipManagementApplication {
                     System.out.println("Scholarship Id: ");
                     String scholarshipId = scanner.nextLine();
                     acceptScholarshipByManagerUseCase.acceptByManager(Long.parseLong(scholarshipId));
-                    System.out.println("Done.");
+
                 }
 
-            // Dashboard scholarship only by manager
+            // Dashboard scholarship by manager
             if (command.equals("dashboard")) {
                 DashboardScholarshipByManagerUseCase dashboardScholarshipByManagerUseCase
                         = new DashboardScholarshipByManagerUseCaseImpl();
@@ -165,9 +165,35 @@ public class ScholarshipManagementApplication {
                     }
                 }
 
+            // Dashboard scholarship by student
+            if (command.equals("stdashboard")) {
+                DashboardScholarshipByStudentUseCase dashboardScholarshipByStudentUseCase
+                        = new DashboardScholarshipByStudentUseCaseImpl();
+                System.out.println(dashboardScholarshipByStudentUseCase.listScholarshipsStatus());
+            }
 
             }
         }
+
+    static void talk(User user) {
+        System.out.println("What do you want to do?");
+        if(user==null){
+            System.out.println("options: \nlogin\texit");
+        }else {
+            if (user.getRole().equals("Student")) {
+                System.out.println("options: \nrequest\tstlist\tstdashboard\texit\tlogout");
+            }
+            if (user.getRole().equals("Manager")) {
+                System.out.println("options: \nmnaccept\tmnreject\tmnlist\tdashboard\texit\tlogout");
+            }
+            if (user.getRole().equals("Supervisor")) {
+                System.out.println("options: \nsvaccept\tsvreject\tsvlist\texit\tlogout");
+            }
+            if (user.getRole().equals("University")) {
+                System.out.println("options: unilist\texit\tlogout");
+            }
+        }
+    }
     }
 
-//reza, rezai, 89658742, shahed, MA, civil, 18, tehran, phd, civil, 1399-02-07
+//masod, tavasoli, 85862, shahed, bachelor, civil, 18, sharif, MA, economic, 1399-03-07

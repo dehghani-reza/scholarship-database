@@ -28,7 +28,7 @@ public class FindScholarshipByStudentUseCaseImpl implements FindScholarshipByStu
                 try {
                     connection = DatabaseConfig.getDatabaseConnection();
                     // query
-                    String sql = "select * from scholarship where id = "+loginUser.getId();
+                    String sql = "select * from scholarship where username = "+"'"+loginUser.getUsername()+"'";
                     // result
                     PreparedStatement preparedStatement = connection.prepareStatement(sql);
                     ResultSet resultSet = preparedStatement.executeQuery();

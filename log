@@ -1,0 +1,206 @@
+[33mcommit 13918bd2328969ee9932932e7704e35139b1810d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Reza <dehghan7447@gmail.com>
+Date:   Sat Dec 7 16:22:44 2019 +0330
+
+    Finalize by Mohammad Reza Dehghani
+
+:000000 100644 0000000 44585d0 A	target/classes/database.sql
+:000000 100644 0000000 1cd6037 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/AcceptScholarshipBySupervisorUseCaseImpl.class
+:000000 100644 0000000 43d36e7 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByManagerUseCaseImpl.class
+:000000 100644 0000000 dc6f744 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByStudentUseCaseImpl.class
+:000000 100644 0000000 27f05e8 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByUniversityUseCaseImpl.class
+:000000 100644 0000000 e3fc728 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RejectScholarshipByManagerUseCaseImpl.class
+:000000 100644 0000000 9d7a9df A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RejectScholarshipBySupervisorUseCaseImpl.class
+:000000 100644 0000000 5a7efcb A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RequestScholarshipByStudentUseCaseImpl.class
+:000000 100644 0000000 e64d22f A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/usermanagement/impl/LogoutUseCase.class
+:000000 100644 0000000 d53a4db A	target/classes/scholarship_scholarship.sql
+:000000 100644 0000000 e895cda A	target/classes/scholarship_user.sql
+
+[33mcommit 9612dde8444918a5cfbda48e9c457879b54ba3fb[m
+Author: Reza <dehghan7447@gmail.com>
+Date:   Sat Dec 7 16:22:04 2019 +0330
+
+    Finalize by Mohammad Reza Dehghani
+
+:100644 100644 8339d41 c2d7e8f M	.idea/compiler.xml
+:100644 100644 6d752e8 17cb891 M	.idea/misc.xml
+:000000 100644 0000000 a479c7a A	.idea/sqldialects.xml
+:100644 100644 d775be9 50ff958 M	pom.xml
+:100644 100644 d1f7317 3bdc5f5 M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/ScholarshipManagementApplication.java
+:100644 100644 462ef06 9cc4a2e M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/core/config/DatabaseConfig.java
+:100644 100644 7f0d418 4fa2fb1 M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/core/share/AuthenticationService.java
+:100644 100644 19a30a5 d8768ed M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/AcceptScholarshipByManagerUseCaseImpl.java
+:100644 100644 d857988 d2b69e9 M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/AcceptScholarshipBySupervisorUseCaseImpl.java
+:100644 100644 c97c14d d064af0 M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByManagerUseCaseImpl.java
+:100644 100644 f5f5365 22fdf21 M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByStudentUseCaseImpl.java
+:100644 100644 cc32415 cbef712 M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByUniversityUseCaseImpl.java
+:100644 100644 068520e 723e2c6 M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RejectScholarshipByManagerUseCaseImpl.java
+:100644 100644 534bad0 1f997f7 M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RejectScholarshipBySupervisorUseCaseImpl.java
+:100644 100644 ffc5be1 0793648 M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RequestScholarshipByStudentUseCaseImpl.java
+:100644 100644 283e7fe 1a7c973 M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/AcceptScholarshipByManagerUseCase.java
+:100644 100644 bb8a6ff 06fa0ed M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/FindScholarshipByManagerUseCase.java
+:100644 100644 0e10093 8193f66 M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/FindScholarshipByStudentUseCase.java
+:100644 100644 6be5c82 c6593cc M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/FindScholarshipByUniversityUseCase.java
+:100644 100644 f7ec1a0 6ffcbfd M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/RejectScholarshipByManagerUseCase.java
+:100644 100644 1814eab 6c66bbf M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/RejectScholarshipBySupervisorUseCase.java
+:100644 100644 0a547c8 78b329e M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/RequestScholarshipByStudentUseCase.java
+:100644 100644 7daf17e 14e9875 M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/usermanagement/impl/LoginUseCaseImpl.java
+:000000 100644 0000000 0d64b01 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/usermanagement/impl/LogoutUseCase.java
+:100644 100644 19378e7 1130b08 M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/usermanagement/usecases/LoginUseCase.java
+:100644 100644 781dfb7 368a335 M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/usermanagement/usecases/LogoutUseCase.java
+:100644 100644 523da4f d53a4db M	src/main/resources/scholarship_scholarship.sql
+:100644 100644 e96984c fa5583f M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/ScholarshipManagementApplication.class
+:100644 100644 14d6198 3dc92b1 M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/core/annotations/Entity.class
+:100644 100644 1bb760c 8e43903 M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/core/annotations/Id.class
+:100644 100644 2b28727 4791772 M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/core/annotations/Service.class
+:100644 100644 88d416f 9c7d839 M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/core/annotations/UseCase.class
+:100644 100644 93fa3a6 1dc5395 M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/core/config/DatabaseConfig.class
+:100644 100644 bf71cef 6a044bc M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/core/share/AuthenticationService.class
+:100644 100644 0515ecd ecd36af M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/AcceptScholarshipByManagerUseCaseImpl.class
+:100644 100644 0eb47ba 7f18214 M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipBySupervisorUseCaseImpl.class
+:100644 100644 fe91912 01f50e3 M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/AcceptScholarshipByManagerUseCase.class
+:100644 100644 326dd98 b0e118e M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/AcceptScholarshipBySupervisorUsecase.class
+:100644 100644 7cfe0a0 949c87c M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/FindScholarshipByManagerUseCase.class
+:100644 100644 a9748df aa84648 M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/FindScholarshipByStudentUseCase.class
+:100644 100644 b1055c0 92ce5c9 M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/FindScholarshipBySupervisorUseCase.class
+:100644 100644 d3bb9b2 5d0719e M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/FindScholarshipByUniversityUseCase.class
+:100644 100644 319fcb2 de4181c M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/RejectScholarshipByManagerUseCase.class
+:100644 100644 04dd987 2c63fdd M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/RejectScholarshipBySupervisorUseCase.class
+:100644 100644 aa59cd6 aee3388 M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/RequestScholarshipByStudentUseCase.class
+:100644 100644 b1aceb4 53dc49e M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/usermanagement/impl/LoginUseCaseImpl.class
+:100644 100644 6352734 08a20f6 M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/usermanagement/usecases/LoginUseCase.class
+:100644 100644 4b211c2 504ef15 M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/usermanagement/usecases/LogoutUseCase.class
+:100644 100644 c6d5307 6184f90 M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/model/Scholarship.class
+:100644 100644 afbf2c0 95ec35b M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/model/User.class
+
+[33mcommit d69a047bb9995ae36c6699b742c90dfc6d50f0fa[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Bahram Jahanshahi <jahanshahi@amnpardaz.com>
+Date:   Thu Dec 5 17:14:03 2019 +0330
+
+    Initial
+
+:000000 100644 0000000 e895cda A	src/main/resources/scholarship_user.sql
+
+[33mcommit 232287c7ae3427054ddd3eed0f584f84df5b37ee[m
+Author: Bahram Jahanshahi <jahanshahi@amnpardaz.com>
+Date:   Thu Dec 5 17:09:22 2019 +0330
+
+    Initial
+
+:000000 100644 0000000 94a25f7 A	.idea/vcs.xml
+:100644 100644 509eabc d1f7317 M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/ScholarshipManagementApplication.java
+:100644 100644 7e22f10 d857988 M	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/AcceptScholarshipBySupervisorUseCaseImpl.java
+:100644 100644 9f6c01f 90d4688 R067	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/AcceptScholarshipBySupervisorUsecase.java	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/AcceptScholarshipBySupervisorUseCase.java
+:100644 100644 26d4680 e96984c M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/ScholarshipManagementApplication.class
+:100644 000000 59ac95a 0000000 D	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/AcceptScholarshipBySupervisorUsecase.class
+:100644 000000 e7a3e41 0000000 D	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByManagerUseCase.class
+:100644 000000 d75fcc3 0000000 D	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByStudentUseCase.class
+:100644 000000 dcff135 0000000 D	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipBySupervisorUseCase.class
+:100644 000000 fd3573d 0000000 D	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByUniversityUseCase.class
+:100644 000000 7c2f5a4 0000000 D	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RejectScholarshipByManagerUseCase.class
+:100644 000000 619a9ca 0000000 D	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RejectScholarshipBySupervisorUseCase.class
+:100644 000000 81c7c4e 0000000 D	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RequestScholarshipByStudentUseCase.class
+:100644 100644 8e06d7e 326dd98 M	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/AcceptScholarshipBySupervisorUsecase.class
+
+[33mcommit 9aae34047421e6f16131dcbc6d1cd56e2729649d[m
+Author: Bahram Jahanshahi <jahanshahi@amnpardaz.com>
+Date:   Thu Dec 5 16:48:19 2019 +0330
+
+    Initial
+
+:000000 100644 0000000 523da4f A	src/main/resources/scholarship_scholarship.sql
+
+[33mcommit 1e45d571f9d04651b5b8caf245181e6f7dc96d60[m
+Author: Bahram Jahanshahi <jahanshahi@amnpardaz.com>
+Date:   Thu Dec 5 16:40:28 2019 +0330
+
+    Initial
+
+:000000 100644 0000000 7e22f10 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/AcceptScholarshipBySupervisorUseCaseImpl.java
+:100644 100644 24d32ec c97c14d R055	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/AcceptScholarshipBySupervisorUsecase.java	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByManagerUseCaseImpl.java
+:100644 100644 93c25fc f5f5365 R055	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByManagerUseCase.java	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByStudentUseCaseImpl.java
+:100644 000000 6f8ebf1 0000000 D	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByUniversityUseCase.java
+:100644 100644 e97798a cc32415 R055	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipBySupervisorUseCase.java	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByUniversityUseCaseImpl.java
+:100644 000000 d5e8fa8 0000000 D	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RejectScholarshipByManagerUseCase.java
+:100644 100644 850df1f 068520e R055	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByStudentUseCase.java	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RejectScholarshipByManagerUseCaseImpl.java
+:100644 000000 7680358 0000000 D	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RejectScholarshipBySupervisorUseCase.java
+:000000 100644 0000000 534bad0 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RejectScholarshipBySupervisorUseCaseImpl.java
+:100644 000000 dca9434 0000000 D	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RequestScholarshipByStudentUseCase.java
+:000000 100644 0000000 ffc5be1 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RequestScholarshipByStudentUseCaseImpl.java
+
+[33mcommit 603872d4b6c3d806c7828ed2f50430cdaa8e1d3d[m
+Author: Bahram Jahanshahi <jahanshahi@amnpardaz.com>
+Date:   Thu Dec 5 16:12:23 2019 +0330
+
+    Initial
+
+:000000 100644 0000000 0ed6303 A	.idea/.gitignore
+:000000 100644 0000000 8339d41 A	.idea/compiler.xml
+:000000 100644 0000000 e1e06b7 A	.idea/dataSources.xml
+:000000 100644 0000000 6d752e8 A	.idea/misc.xml
+:000000 100644 0000000 e96534f A	.idea/uiDesigner.xml
+:000000 100644 0000000 d775be9 A	pom.xml
+:000000 100644 0000000 78b2cc5 A	sholarshipmanagement.iml
+:000000 100644 0000000 509eabc A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/ScholarshipManagementApplication.java
+:000000 100644 0000000 8ed8454 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/core/annotations/Entity.java
+:000000 100644 0000000 fe5059f A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/core/annotations/Id.java
+:000000 100644 0000000 3e6c3c3 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/core/annotations/Service.java
+:000000 100644 0000000 6b5db7f A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/core/annotations/UseCase.java
+:000000 100644 0000000 462ef06 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/core/config/DatabaseConfig.java
+:000000 100644 0000000 7f0d418 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/core/share/AuthenticationService.java
+:000000 100644 0000000 19a30a5 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/AcceptScholarshipByManagerUseCaseImpl.java
+:000000 100644 0000000 24d32ec A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/AcceptScholarshipBySupervisorUsecase.java
+:000000 100644 0000000 93c25fc A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByManagerUseCase.java
+:000000 100644 0000000 850df1f A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByStudentUseCase.java
+:000000 100644 0000000 e97798a A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipBySupervisorUseCase.java
+:000000 100644 0000000 9e3c330 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipBySupervisorUseCaseImpl.java
+:000000 100644 0000000 6f8ebf1 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByUniversityUseCase.java
+:000000 100644 0000000 d5e8fa8 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RejectScholarshipByManagerUseCase.java
+:000000 100644 0000000 7680358 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RejectScholarshipBySupervisorUseCase.java
+:000000 100644 0000000 dca9434 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RequestScholarshipByStudentUseCase.java
+:000000 100644 0000000 283e7fe A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/AcceptScholarshipByManagerUseCase.java
+:000000 100644 0000000 9f6c01f A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/AcceptScholarshipBySupervisorUsecase.java
+:000000 100644 0000000 bb8a6ff A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/FindScholarshipByManagerUseCase.java
+:000000 100644 0000000 0e10093 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/FindScholarshipByStudentUseCase.java
+:000000 100644 0000000 d7d6cfc A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/FindScholarshipBySupervisorUseCase.java
+:000000 100644 0000000 6be5c82 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/FindScholarshipByUniversityUseCase.java
+:000000 100644 0000000 f7ec1a0 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/RejectScholarshipByManagerUseCase.java
+:000000 100644 0000000 1814eab A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/RejectScholarshipBySupervisorUseCase.java
+:000000 100644 0000000 0a547c8 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/RequestScholarshipByStudentUseCase.java
+:000000 100644 0000000 7daf17e A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/usermanagement/impl/LoginUseCaseImpl.java
+:000000 100644 0000000 19378e7 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/usermanagement/usecases/LoginUseCase.java
+:000000 100644 0000000 781dfb7 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/features/usermanagement/usecases/LogoutUseCase.java
+:000000 100644 0000000 e2770b8 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/model/Scholarship.java
+:000000 100644 0000000 47de411 A	src/main/java/ir/mctab/java32/projects/scholarshipmanagement/model/User.java
+:000000 100644 0000000 44585d0 A	src/main/resources/database.sql
+:000000 100644 0000000 26d4680 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/ScholarshipManagementApplication.class
+:000000 100644 0000000 14d6198 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/core/annotations/Entity.class
+:000000 100644 0000000 1bb760c A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/core/annotations/Id.class
+:000000 100644 0000000 2b28727 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/core/annotations/Service.class
+:000000 100644 0000000 88d416f A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/core/annotations/UseCase.class
+:000000 100644 0000000 93fa3a6 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/core/config/DatabaseConfig.class
+:000000 100644 0000000 bf71cef A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/core/share/AuthenticationService.class
+:000000 100644 0000000 0515ecd A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/AcceptScholarshipByManagerUseCaseImpl.class
+:000000 100644 0000000 59ac95a A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/AcceptScholarshipBySupervisorUsecase.class
+:000000 100644 0000000 e7a3e41 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByManagerUseCase.class
+:000000 100644 0000000 d75fcc3 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByStudentUseCase.class
+:000000 100644 0000000 dcff135 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipBySupervisorUseCase.class
+:000000 100644 0000000 0eb47ba A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipBySupervisorUseCaseImpl.class
+:000000 100644 0000000 fd3573d A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/FindScholarshipByUniversityUseCase.class
+:000000 100644 0000000 7c2f5a4 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RejectScholarshipByManagerUseCase.class
+:000000 100644 0000000 619a9ca A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RejectScholarshipBySupervisorUseCase.class
+:000000 100644 0000000 81c7c4e A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/impl/RequestScholarshipByStudentUseCase.class
+:000000 100644 0000000 fe91912 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/AcceptScholarshipByManagerUseCase.class
+:000000 100644 0000000 8e06d7e A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/AcceptScholarshipBySupervisorUsecase.class
+:000000 100644 0000000 7cfe0a0 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/FindScholarshipByManagerUseCase.class
+:000000 100644 0000000 a9748df A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/FindScholarshipByStudentUseCase.class
+:000000 100644 0000000 b1055c0 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/FindScholarshipBySupervisorUseCase.class
+:000000 100644 0000000 d3bb9b2 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/FindScholarshipByUniversityUseCase.class
+:000000 100644 0000000 319fcb2 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/RejectScholarshipByManagerUseCase.class
+:000000 100644 0000000 04dd987 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/RejectScholarshipBySupervisorUseCase.class
+:000000 100644 0000000 aa59cd6 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/scholarshipverification/usecases/RequestScholarshipByStudentUseCase.class
+:000000 100644 0000000 b1aceb4 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/usermanagement/impl/LoginUseCaseImpl.class
+:000000 100644 0000000 6352734 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/usermanagement/usecases/LoginUseCase.class
+:000000 100644 0000000 4b211c2 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/features/usermanagement/usecases/LogoutUseCase.class
+:000000 100644 0000000 c6d5307 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/model/Scholarship.class
+:000000 100644 0000000 afbf2c0 A	target/classes/ir/mctab/java32/projects/scholarshipmanagement/model/User.class

@@ -4,6 +4,7 @@ import ir.mctab.java32.projects.scholarshipmanagement.core.annotations.Service;
 import ir.mctab.java32.projects.scholarshipmanagement.core.annotations.UseCase;
 import ir.mctab.java32.projects.scholarshipmanagement.core.config.DatabaseConfig;
 import ir.mctab.java32.projects.scholarshipmanagement.core.share.AuthenticationService;
+import ir.mctab.java32.projects.scholarshipmanagement.core.share.ScholarshipLog;
 import ir.mctab.java32.projects.scholarshipmanagement.features.scholarshipverification.usecases.RejectScholarshipByManagerUseCase;
 import ir.mctab.java32.projects.scholarshipmanagement.model.User;
 
@@ -28,17 +29,16 @@ public class RejectScholarshipByManagerUseCaseImpl implements RejectScholarshipB
                 // execute
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.setLong(1, scholarshipId);
-                preparedStatement.executeUpdate();
+                int i=preparedStatement.executeUpdate();
                 //log
-                String sqlLog = "INSERT INTO `scholarship`.`scholarship_log` " +
-                        "(`action`, `date`, `userid`, `scholarshipid`) " +
-                        "VALUES ( ?, ?, ?, ?)";
-                PreparedStatement preparedStatementLog = connection.prepareStatement(sqlLog);
-                preparedStatementLog.setString(1,"RejectedByManager");
-                preparedStatementLog.setString(2,AuthenticationService.getInstance().getDate());
-                preparedStatementLog.setLong(3,user.getId());
-                preparedStatementLog.setLong(4,scholarshipId);
-                preparedStatementLog.executeUpdate();
+                if(i!=0){
+                    int i1= ScholarshipLog.getInstance().getResultScholarshipLog("RejectedByManager",scholarshipId);
+                    if (i1!=0){
+                        System.out.println(i+" row('s) affected");
+                    }
+                }else {
+                    System.out.println("you can't change this scholarship status");
+                }
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             } catch (SQLException e) {
