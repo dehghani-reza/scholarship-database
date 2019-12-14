@@ -3,6 +3,8 @@ package ir.mctab.java32.projects.scholarshipmanagement.features.usermanagement.i
 import ir.mctab.java32.projects.scholarshipmanagement.core.annotations.Service;
 import ir.mctab.java32.projects.scholarshipmanagement.core.config.DatabaseConfig;
 import ir.mctab.java32.projects.scholarshipmanagement.core.share.AuthenticationService;
+import ir.mctab.java32.projects.scholarshipmanagement.core.share.LogLog;
+import ir.mctab.java32.projects.scholarshipmanagement.core.share.ScholarshipLog;
 import ir.mctab.java32.projects.scholarshipmanagement.features.usermanagement.usecases.LoginUseCase;
 import ir.mctab.java32.projects.scholarshipmanagement.model.User;
 
@@ -32,6 +34,9 @@ public class LoginUseCaseImpl implements LoginUseCase {
                 );
                 AuthenticationService.getInstance().setLoginUser(user);
                 AuthenticationService.getInstance().setDate(date);
+                if(AuthenticationService.getInstance().getLoginUser()!=null){
+                    int i1= LogLog.getInstance().getResultLogLog("Login");
+                }
                 return user;
             }
         } catch (ClassNotFoundException e) {
